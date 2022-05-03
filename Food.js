@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, ImageBackground, Image, Pressable, ScrollView,TouchableOpacity} from 'react-native';
 import {useState} from 'react';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, MaterialIcons, Fontisto} from '@expo/vector-icons';
 
 
 
 
-export default function Food({food_name,image, amount, totalprice , setTotalprice, food_description}) {
+export default function Food({bac, food_name,image, amount, totalprice , setTotalprice, food_description}) {
   let food_price= amount;
   const[items, setItems]=useState(0);
 
@@ -25,15 +25,19 @@ export default function Food({food_name,image, amount, totalprice , setTotalpric
         <View style={styles.food_details}>
         <Text style={styles.food_name}>{food_name}</Text>
         <Text style={styles.food_description}>{food_description}</Text>
+        <View style={styles.heart}>
+        <TouchableOpacity>
+        <Fontisto name="favorite" size={24} color="#FF6F00" /></TouchableOpacity></View>
         <Text style={styles.food_price}>M{amount}.00</Text>
         <View style={styles.cart}>
         <Pressable style={styles.button} onPress={addItems}>
-          <Text style={styles.item_number}>+</Text>
+        <MaterialCommunityIcons name="cart-plus" size={20} color="black" />
         </Pressable>
-        <Text style={styles.item}>{items}</Text>
+        <Text style={styles.item}>x {items}</Text>
         <Pressable style={styles.button} onPress={reduceItems}>
-          <Text style={styles.item_number}>-</Text>
+        <MaterialCommunityIcons name="cart-minus" size={20} color="black" />
         </Pressable>
+        
         </View>
         </View>
        </View>
@@ -56,18 +60,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderColor: '#E0E0E0',
     borderRadius: 5,
-    backgroundColor: '#F57F17',
+
     width: '100%',
     marginBottom: 4,
     shadowRadius: 7,
     shadowColor: 'grey',
-    height: 160,
-    padding: 2
-  },
-  bac:{
-    flex: 1,
-    justifyContent: "center"
-
+    height: 185,
+    padding: 2,
+  
   },
   food_details:{
     width: 200,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic'
   },
   image:{
-    height: 155,
+    height: 180,
     width: 160,
     borderRadius: 5,
 
@@ -109,23 +109,22 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginTop: 1
   },
-  item_number:{
-    fontSize: 15,
-    marginLeft:0,
-    marginTop: 0,
-    color: 'red'
-  },
   item:{
     fontSize: 15,
     color: 'white',
     marginLeft: 10,
-    marginTop: 0
+    marginTop: 0,
+    
 
   },
   cart:{
     alignContent: 'space-between',
     flexDirection: 'row'
    
-  }
+  },
+  heart:{
+    marginLeft: 10,
+    marginTop: 10
+  },
   
 })
