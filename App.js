@@ -34,10 +34,10 @@ export default function App() {
       </View>
       <ScrollView>
       <Food image={require('./assets/fish.jpg')} food_name={"Fish and Chips"}food_description={"2 fish and family chips with 2 russians"} amount={30} totalprice={totalprice} setTotalprice={setTotalprice}/> 
-      <Food image={require('./assets/bread.webp')} food_name={"Sandwich"} food_description={"Bread toast served with eggs and a cup of tea"} amount={20} totalprice={totalprice} setTotalprice={setTotalprice}/>
+      <Food image={require('./assets/mince.jpg')} food_name={"Rice and mince"} food_description={"Rice served with mince. Plus a cold-drink"} amount={20} totalprice={totalprice} setTotalprice={setTotalprice}/>
       <Food image={require('./assets/chicken.jpg')} food_name={"Pap and Chicken"} food_description={"Pap served with chicken stew and rolls"} amount={25} totalprice={totalprice} setTotalprice={setTotalprice}/>
       <Food image={require('./assets/pork.jpg')} food_name={"Pap and Pork"} food_description={"Pap served with pork tortes and chakalaka"} amount={25} totalprice={totalprice} setTotalprice={setTotalprice}/>
-      <Food image={require('./assets/wors.jpg')} food_name={"Pap and Wors"} food_description={"Pap served with grilled wors and chakalaka"} amount={30} totalprice={totalprice} setTotalprice={setTotalprice}/>
+      <Food image={require('./assets/wors.webp')} food_name={"Pap and Wors"} food_description={"Pap served with grilled wors and chakalaka"} amount={30} totalprice={totalprice} setTotalprice={setTotalprice}/>
       <Food image={require('./assets/steak.webp')} food_name={"Pap and Steak"} food_description={"Pap served with steak and peri peri"} amount={40} totalprice={totalprice} setTotalprice={setTotalprice}/>
       </ScrollView>
       <View style={styles.header2}>
