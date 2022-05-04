@@ -5,7 +5,7 @@ import  Food from './Food';
 
 
 export default function App() {
-  const [totalprice,setTotalprice, setItems, addItems] = useState(0);
+  const [totalprice,setTotalprice, items] = useState(0);
 
   return (
     
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   
 header:{
   flexDirection: 'row',
-  backgroundColor: '#E53935',
+  backgroundColor: '#222',
   textAlign: 'auto',
   width: '100%',
   height: '10%',
@@ -86,46 +86,49 @@ header_text:{
   fontWeight: 'bold'
 
 },
-header2:{
+header2:{ // footer
   backgroundColor: '#333',
   width: '100%',
   height: 30,
   marginBottom: 2,
+  borderRadius: 15,
+  flexDirection: 'row',
+  alignContent: 'center'
 
 
 },
 total:{
  fontSize: 20,
- marginLeft: 100,
+ marginLeft: 90,
  color: 'white',
  fontWeight: "bold",
- fontStyle: 'italic'
+ 
 },
 header3:{
   alignContent: 'space-between',
   flexDirection: 'row',
-  backgroundColor: '#E53935',
+  backgroundColor: '#222',
   width: '100%',
   height: 30,
   marginBottom: 5
 
 },
 search:{
-  width: 200,
+  width: 180,
   height: 30,
-  backgroundColor: '#777',
-  borderRadius: 20,
+  backgroundColor: '#999',
+  borderRadius: 12,
   alignItems: 'center',
   padding: 0,
-  marginLeft: 10,
+  marginLeft: 15,
   marginTop: 6
 },
 icon1:{
-  marginLeft: 10,
+  marginLeft: 9,
   marginTop: 5
 },
 icon2:{
-  marginLeft: 10,
+  marginLeft: 24,
   marginTop: 5
 },
 icon3:{

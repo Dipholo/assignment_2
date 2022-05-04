@@ -26,8 +26,11 @@ export default function Food({bac, food_name,image, amount, totalprice , setTota
         <Text style={styles.food_name}>{food_name}</Text>
         <Text style={styles.food_description}>{food_description}</Text>
         <View style={styles.heart}>
-        <TouchableOpacity>
-        <Fontisto name="favorite" size={24} color="#FF6F00" /></TouchableOpacity></View>
+        <MaterialIcons name="star-rate" size={24} color="red" />
+        <MaterialIcons name="star-rate" size={24} color="red" />
+        <MaterialIcons name="star-rate" size={24} color="red" />
+        <MaterialIcons name="star-rate" size={24} color="red" />
+        <MaterialIcons name="star-rate" size={24} color="red" /></View>
         <Text style={styles.food_price}>M{amount}.00</Text>
         <View style={styles.cart}>
         <Pressable style={styles.button} onPress={addItems}>
@@ -76,7 +79,6 @@ const styles = StyleSheet.create({
   },
   food_name:{
     fontSize: 22,
-    fontStyle: 'italic',
     color: '#FAFAFA',
     marginLeft: 10,
     fontWeight: "bold"
@@ -85,7 +87,7 @@ const styles = StyleSheet.create({
     color: '#ECEFF1',
     fontSize: 18,
     marginLeft: 6,
-    fontStyle: 'italic'
+
   },
   image:{
     height: 180,
@@ -96,7 +98,6 @@ const styles = StyleSheet.create({
   food_price:{
     fontSize: 28,
     marginLeft: 10,
-    fontStyle: 'italic',
     color: '#F5F5F5'
   },
   button:{
@@ -124,7 +125,8 @@ const styles = StyleSheet.create({
   },
   heart:{
     marginLeft: 10,
-    marginTop: 10
+    marginTop: 10,
+    flexDirection: 'row'
   },
   
 })
